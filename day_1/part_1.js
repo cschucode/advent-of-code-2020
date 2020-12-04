@@ -21,4 +21,4 @@ function twoSumToTarget(input, target) {
     }
 }
 
-console.log(twoSumToTarget(input.INPUT, TARGET));
+console.log(twoSumToTarget(input.ARRAY, TARGET));
