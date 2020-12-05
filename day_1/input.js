@@ -201,6 +201,4 @@ const input = `1933
 
 const inputToArray = input.split('\n');
 
-module.exports = {
-    ARRAY: inputToArray
-}
+module.exports = inputToArray;
