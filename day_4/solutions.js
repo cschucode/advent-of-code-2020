@@ -14,7 +14,7 @@ function validatePassport(data) {
 	const required = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
 
 	for (let i = 0; i < passports.length; i++) {
-		const passport = passports[i];
+		const passport = formatPassport(passports[i]);
 		let validPassport = true;
 		
 		for (let j = 0; j < required.length; j++) {
@@ -29,6 +29,10 @@ function validatePassport(data) {
 	}
 
 	return validPassports;
+}
+
+function formatPassport(str) {
+	console.log(str);
 }
 
 console.log(validatePassport(input));
