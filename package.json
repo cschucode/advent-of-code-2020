@@ -4,7 +4,8 @@
   "description": "Advent of Code Challenges",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint day_*/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/cschucode/advent-of-code-2020#readme",
   "dependencies": {
+    "require-text": "0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
     "mocha": "^8.2.1"
   }
 }
