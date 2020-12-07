@@ -5,35 +5,15 @@ const inputArray = requireText('./input.txt', require).split('\n');
 /**
  * counts trees at given coordinates in matrix
  *
- * @param Array map matrix array of map coordinates
- * @param {number} h number of spaces to move right
- * @param {number} v number of spaces to move down
- * @return {number} Number of valid passwords
+ * @param Array passports array of passports to check
+ * @return {number} Number of valid passports
  */
-function treeCounter(map, h, v) {
-	let treeCount = 0;
-	const xLimit = map[0].length;
-	const yLimit = map.length;
-	let x = h;
-	let y = v;
+function validatePassport(passports) {
+	let validPassports = 0;
 
-	while (y < yLimit) {
-		if (map[y][x] === '#') {
-			treeCount++;
-		}
-
-		if (x + h >= xLimit) {
-			x = (x + h) - xLimit;
-		} else {
-			x += h;
-		}
-		y += v;
-	}
-
-	return treeCount;
+	return validPassports;
 }
 
 module.exports = {
-	treeCounter,
-	multipleSlopeTreeCounter,
+	validatePassport,
 }

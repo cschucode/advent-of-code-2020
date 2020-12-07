@@ -24,7 +24,7 @@ const test_slopes = [
 
 describe('Day Three', function() {
   describe('treeCounter', function() {
-    it('should should return number of trees for a given region', function() {
+    it('should return number of trees for a given region', function() {
       const expected_treeCounter = 7;
       assert.equal(treeCounter(test_input, 3, 1), expected_treeCounter);
     });

@@ -8,7 +8,7 @@ const inputArray = requireText('./input.txt', require).split('\n');
  * @param Array map matrix array of map coordinates
  * @param {number} h number of spaces to move right
  * @param {number} v number of spaces to move down
- * @return {number} Number of valid passwords
+ * @return {number} Number of trees for given slope
  */
 function treeCounter(map, h, v) {
 	let treeCount = 0;
@@ -39,7 +39,7 @@ function treeCounter(map, h, v) {
  * @param Array map matrix array of map coordinates
  * @param {number} h number of spaces to move right
  * @param {number} v number of spaces to move down
- * @return {number} Number of valid passwords
+ * @return {number} Number of trees for multiple slopes
  */
 function multipleSlopeTreeCounter(map, slopes) {
 	let totalTrees = 1;
