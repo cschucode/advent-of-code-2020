@@ -3,6 +3,13 @@ const requireText = require('require-text');
 const inputArray = requireText('./input.txt', require).split('\n');
 const target = 2020;
 
+/**
+ * multiplies two numbers of given array that add up to target sum
+ *
+ * @param Array array of string number values
+ * @param {number} target target sum
+ * @return {number} product of two numbers that add up to target
+ */
 function twoSumToTarget(input, target) {
     let pointer = 0;
 
@@ -23,7 +30,14 @@ function twoSumToTarget(input, target) {
     }
 }
 
-const threeSumToTarget = function(nums, target) {
+/**
+ * multiplies the three numbers of a given array that add up to target
+ *
+ * @param Array array of string number values
+ * @param {number} target target sum
+ * @return {number} product of 3 numbers that add up to target
+ */
+function threeSumToTarget(nums, target) {
 	nums = nums.sort((a, b) => a - b);
 	for (let i = 0; i < nums.length; i++) {
 		let j = i + 1;
