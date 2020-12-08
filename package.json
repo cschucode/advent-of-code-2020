@@ -4,8 +4,10 @@
   "description": "Advent of Code Challenges",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "lint": "eslint day_*/*.js"
+    "task": "node -r esm",
+    "test": "export TZ=UTC; mocha -r esm --recursive './**/*.spec.js'",
+    "test:watch": "export TZ=UTC; mocha -R min -w -r esm --recursive './**/*.spec.js'",
+    "lint": "eslint ./**/*.js"
   },
   "author": "Chris Schuhmacher",
   "license": "ISC",
