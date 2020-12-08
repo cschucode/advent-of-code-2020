@@ -1,4 +1,4 @@
-import { validatePassport } from "../day_4/solutions";
+import { validatePassports } from "../day_4/solutions";
 import { expect } from 'chai';
 
 const test_input = `ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
@@ -19,7 +19,7 @@ describe('Day Four', function() {
   describe('validatePassport', function() {
     it('should return number of valid passports from given array', function() {
       const expected_validPassports = 2;
-      expect(validatePassport(test_input)).to.equal(expected_validPassports)
+      expect(validatePassports(test_input)).to.equal(expected_validPassports)
     });
   });
 });

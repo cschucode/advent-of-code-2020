@@ -8,7 +8,7 @@ const input = requireText('./input.txt', require);
  * @param Array data array of passports to check
  * @return {number} Number of valid passports
  */
-export const validatePassport = (data) => {
+export const validatePassports = (data) => {
 	let validPassports = 0;
 	const passports = data.split(/\n{2,}/g).map((pass) => pass.replace(/\n+/g, ' '));
 	const required = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
