@@ -1,11 +1,26 @@
-export const formatPassport = (str) => {
-	const passObj = {};
-	const fields = str.split(' ');
+import Validate from './Validator';
+
+export const formatPassport = (dataString) => {
+	const passport = {};
+	const fields = dataString.split(' ');
 
 	fields.forEach((field) => {
 		let pair = field.replace('\n', '').split(':');
-		passObj[pair[0]] = pair[1];
+		passport[pair[0]] = pair[1];
 	});
 
-	return passObj;
+	return passport;
 }
+
+export const strictlyValidatePassports = (passports) => {
+	const validate = new Validate();
+	let passportCount = 0;
+
+	passports.forEach((passport) => {
+		if (validate.isValid(passport)) {
+			passportCount++;
+		}
+	});
+
+	return passportCount;
+}	

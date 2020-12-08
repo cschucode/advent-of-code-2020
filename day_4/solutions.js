@@ -1,6 +1,5 @@
 import requireText from 'require-text';
-import { formatPassport } from './utils';
-import Validate from './Validator';
+import { formatPassport, strictlyValidatePassports } from './utils';
 
 const input = requireText('./input.txt', require);
 
@@ -37,19 +36,6 @@ export const validatePassports = (data, strictMode = false) => {
 
 	return strictMode ? strictlyValidatePassports(validPassports) : passportCount;
 }
-
-const strictlyValidatePassports = (passports) => {
-	const validate = new Validate();
-	let passportCount = 0;
-
-	passports.forEach((passport) => {
-		if (validate.isValid(passport)) {
-			passportCount++;
-		}
-	});
-
-	return passportCount;
-}	
 
 // console.log(validatePassports(input));
 // console.log(validatePassports(input, true));
