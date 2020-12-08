@@ -19,7 +19,12 @@ describe('Day Four', function() {
   describe('validatePassport', function() {
     it('should return number of valid passports from given array', function() {
       const expected_validPassports = 2;
-      expect(validatePassports(test_input)).to.equal(expected_validPassports)
+      expect(validatePassports(test_input)).to.equal(expected_validPassports);
+    });
+
+    it('should return number of strictly validated passports in strict mode', function() {
+      const expected_validPassports = 2;
+      expect(validatePassports(test_input, true)).to.equal(expected_validPassports);
     });
   });
 });
