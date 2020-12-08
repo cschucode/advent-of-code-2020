@@ -7,21 +7,15 @@
     "test": "mocha",
     "lint": "eslint day_*/*.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cschucode/advent-of-code-2020.git"
-  },
   "author": "Chris Schuhmacher",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cschucode/advent-of-code-2020/issues"
-  },
-  "homepage": "https://github.com/cschucode/advent-of-code-2020#readme",
   "dependencies": {
     "require-text": "0.0.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^7.15.0",
+    "esm": "^3.2.25",
     "mocha": "^8.2.1"
   }
 }
