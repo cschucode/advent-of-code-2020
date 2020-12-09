@@ -1,6 +1,6 @@
-var assert = require('assert');
+import { expect } from 'chai';
 
-const { treeCounter, multipleSlopeTreeCounter } = require('../day_3/solutions');
+import { treeCounter, multipleSlopeTreeCounter } from '../day_3/solutions';
 
 const test_input = `..##.......
 #...#...#..
@@ -26,14 +26,14 @@ describe('Day Three', function() {
   describe('treeCounter', function() {
     it('should return number of trees for a given region', function() {
       const expected_treeCounter = 7;
-      assert.equal(treeCounter(test_input, 3, 1), expected_treeCounter);
+      expect(treeCounter(test_input, 3, 1)).to.equal(expected_treeCounter);
     });
   });
 
   describe('multipleSlopeTreeCounter', function() {
     it('should return total number of trees for multiple slopes', function() {
       const expected_multipleSlopeTreeCounter = 336;
-      assert.equal(multipleSlopeTreeCounter(test_input, test_slopes), expected_multipleSlopeTreeCounter);
+      expect(multipleSlopeTreeCounter(test_input, test_slopes)).to.equal(expected_multipleSlopeTreeCounter);
     });
   });
 });

@@ -1,4 +1,4 @@
-const requireText = require('require-text');
+import requireText from 'require-text';
 
 const inputArray = requireText('./input.txt', require).split('\n');
 
@@ -8,7 +8,7 @@ const inputArray = requireText('./input.txt', require).split('\n');
  * @param Array passwords array of passwords to check
  * @return {number} Number of valid passwords
  */
-function passCheckLowHigh(passwords) {
+export const passCheckLowHigh = (passwords) => {
 	let validCount = 0;
 
 	for (let i = 0; i < passwords.length; i++) {
@@ -36,7 +36,7 @@ function passCheckLowHigh(passwords) {
  * @param Array passwords array of passwords to check
  * @return {number} Number of valid passwords
  */
-function passCheckEitherOr(passwords) {
+export const  passCheckEitherOr = (passwords) => {
 	let validCount = 0;
 
 	for (let i = 0; i < passwords.length; i++) {
@@ -55,9 +55,4 @@ function passCheckEitherOr(passwords) {
 	}
 
 	return validCount;
-}
-
-module.exports = {
-	passCheckLowHigh,
-	passCheckEitherOr
 }

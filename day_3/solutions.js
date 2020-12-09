@@ -1,4 +1,4 @@
-const requireText = require('require-text');
+import requireText from 'require-text';
 
 const inputArray = requireText('./input.txt', require).split('\n');
 
@@ -10,7 +10,7 @@ const inputArray = requireText('./input.txt', require).split('\n');
  * @param {number} v number of spaces to move down
  * @return {number} Number of trees for given slope
  */
-function treeCounter(map, h, v) {
+export const treeCounter = (map, h, v) => {
 	let treeCount = 0;
 	const xLimit = map[0].length;
 	const yLimit = map.length;
@@ -41,7 +41,7 @@ function treeCounter(map, h, v) {
  * @param {number} v number of spaces to move down
  * @return {number} Number of trees for multiple slopes
  */
-function multipleSlopeTreeCounter(map, slopes) {
+export const multipleSlopeTreeCounter = (map, slopes) => {
 	let totalTrees = 1;
 
 	slopes.forEach((slope) => {
@@ -49,9 +49,4 @@ function multipleSlopeTreeCounter(map, slopes) {
 	});
 
 	return totalTrees;
-}
-
-module.exports = {
-	treeCounter,
-	multipleSlopeTreeCounter,
 }
