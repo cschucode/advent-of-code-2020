@@ -1,4 +1,4 @@
-const requireText = require('require-text');
+import requireText from 'require-text';
 
 const inputArray = requireText('./input.txt', require).split('\n');
 const target = 2020;
@@ -10,7 +10,7 @@ const target = 2020;
  * @param {number} target target sum
  * @return {number} product of two numbers that add up to target
  */
-function twoSumToTarget(input, target) {
+export const twoSumToTarget = (input, target) => {
     let pointer = 0;
 
     while (pointer < input.length) {
@@ -37,7 +37,7 @@ function twoSumToTarget(input, target) {
  * @param {number} target target sum
  * @return {number} product of 3 numbers that add up to target
  */
-function threeSumToTarget(nums, target) {
+export const threeSumToTarget = (nums, target) => {
 	nums = nums.sort((a, b) => a - b);
 	for (let i = 0; i < nums.length; i++) {
 		let j = i + 1;
@@ -58,9 +58,4 @@ function threeSumToTarget(nums, target) {
 		}
 	}
 
-}
-
-module.exports = {
-	twoSumToTarget,
-	threeSumToTarget,
 }
