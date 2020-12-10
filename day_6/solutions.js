@@ -53,4 +53,4 @@ export const sumAllUnifiedCounts = (groupList) => {
 
 
 // console.log(sumAllCounts(input));
-console.log(sumAllUnifiedCounts(input));
+// console.log(sumAllUnifiedCounts(input));
